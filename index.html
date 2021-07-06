@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>code review</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>新人教育訓練</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+        <a data-toggle="tab" href="#home">
+          <p>Code Review</p>
+        </a>
+        <li class="active ">
+          <a href="#htmlSubmenu" data-toggle="collapse" aria-expanded="false">Html</a>
+          <ul class="collapse list-unstyled" id="htmlSubmenu">
+            <li><a data-toggle="tab" href="#dom">DOM結構、元素、標籤</a></li>
+            <li><a data-toggle="tab" href="#css">ID 、 CLASS、STYLE (常用CSS)</a></li>
+            <li><a data-toggle="tab" href="#">純靜態網頁製作</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#jsSubmenu" data-toggle="collapse" aria-expanded="false">JavaScript</a>
+          <ul class="collapse list-unstyled" id="jsSubmenu">
+            <li><a data-toggle="tab" href="#jsEvent">事件註冊、正則表示法</a></li>
+            <li><a data-toggle="tab" href="#jsObvect">變量對象、函數</a></li>
+            <li><a data-toggle="tab" href="#jsJSON">JSON對象、DOM操作</a></li>
+            <li><a data-toggle="tab" href="#jsAJAX">AJAX應用</a></li>
+            <li><a data-toggle="tab" href="#jsES6">ES6常用語法</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#vueSubmenu" data-toggle="collapse" aria-expanded="false">Vue</a>
+          <ul class="collapse list-unstyled" id="vueSubmenu">
+            <li><a data-toggle="tab" href="#">模板語法</a></li>
+            <li><a data-toggle="tab" href="#">生命週期</a></li>
+            <li><a data-toggle="tab" href="#">VueRouter</a></li>
+            <li><a data-toggle="tab" href="#">Vuex</a></li>
+            <li><a data-toggle="tab" href="#">除錯工具</a></li>
+            <li><a data-toggle="tab" href="#">Nuxt框架</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#frontSubmenu" data-toggle="collapse" aria-expanded="false">前端技術</a>
+          <ul class="collapse list-unstyled" id="frontSubmenu">
+            <li><a data-toggle="tab" href="#">AJAX、AXIOS應用</a></li>
+            <li><a data-toggle="tab" href="#">CROS跨域存取概念</a></li>
+            <li><a href="#">前端儲存器</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#exampleSubmenu" data-toggle="collapse" aria-expanded="false">實作</a>
+          <ul class="collapse list-unstyled" id="exampleSubmenu">
+            <li><a href="#">ToDoList小範例</a></li>
+            <li><a href="#">簡單的網站</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </nav>
+
+
+    <div id="content">
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+          <div class="navbar-header">
+            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+              <i class="glyphicon glyphicon-align-left"></i>
+              <span>Toggle Sidebar</span>
+            </button>
+          </div>
+
+
+        </div>
+      </nav>
+
+      <div class="tab-content mainPanel">
+        <div id="home" class="tab-pane fade in active">
+          <p id="homeText">~金金金的網頁前端教學~</h3>
+        </div>
+
+        <div id="dom" class="tab-pane fade">
+          <img src="DOM.jpg" alt="DOM樹狀圖" class="img">
+          <div class="imgPreview">
+            <img src="#" alt="" id="imgPreview">
+          </div>
+        </div>
+
+        <div id="css" class="tab-pane fade ">
+          <img src="css.jpg" alt="css圖片" class="img" style=" border-radius: 20px; ">
+          <div class="imgPreview">
+            <img src="#" alt="" id="imgPreview">
+          </div>
+          <div style=" background-color: lightgrey;
+          width: 300px;
+          border: 15px solid green;
+          padding: 50px;
+          margin: 20px; 
+          text-align: center;"> content</div>
+        </div>
+
+
+        <div id="jsEvent" class="tab-pane fade ">
+          <p>事件註冊、正則表示法</p>
+          <p id="change">hello!! Welcome to my Websiet</p>
+          <button class="btn btn-primary " onclick="changeword()">修改錯字</button>
+
+        </div>
+
+        <div id="jsObvect" class="tab-pane fade">
+          <p>變量對象、函數</p>
+          <div class="form-group">
+            <label>input X</label>
+            <input class="form-control" id="inputx" type="text">
+          </div>
+          <div class="form-group">
+            <label>input y</label>
+            <input class="form-control" id="inputy" type="text">
+          </div>
+
+          <div class="form-group">
+            <label>select list</label>
+            <select class="form-control" id="sel1">
+              <option>+</option>
+              <option>-</option>
+              <option>x</option>
+              <option>÷</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" onclick="varFunc()">Submit</button><br>
+          <p id="result">
+            </lebel>
+
+        </div>
+
+        <div id="jsJSON" class="tab-pane fade ">
+          <p>JSON對象、DOM操作</p>
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>30</td>
+                <td>New York</td>
+              </tr>
+              <tr>
+                <td>Mary</td>
+                <td>20</td>
+                <td>Tokyo</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>18</td>
+                <td>Taipei</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="input-group">
+            <input type="text" class="form-control" id="search" placeholder="Search">
+            <div class="input-group-btn">
+              <button class="btn btn-default" onclick="search()">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+          <p id="jsonResult"></p>
+        </div>
+
+        <div id="jsAJAX" class="tab-pane fade ">
+          <p>AJAX應用</p>
+          <img src="ajaxwork.jpg" alt="ajax" style="width:1200px;" /><br>
+          <img src="ajax.jpg" alt="ajax" style="width: 500px;"/><br>
+
+          <button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
+          <br><br>
+          <table id="demo"></table>
+        </div>
+
+        <div id="jsES6" class="tab-pane fade ">
+          <p>ES6語法</p>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
